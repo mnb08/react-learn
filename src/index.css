@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 60%;
+    margin: 10px auto;
+}
+
+.container>div{
+    border: 1px solid black;
+    margin: 10px 0;
+    padding: 10px;
+    position: relative;
+    /* float: left; */
+}
+
+.container>.posts>img{
+    margin: 10px;
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+
+.pagination{
+    width: 30%;
+    margin: 20px auto;
+}
+
+.pagination button{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    background: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 5px;
+}
+
+.pagination button.active{
+    background-color: lightgreen;
+    color: white;
+    border: none;
+}
+
+.container div button{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: none;
+    top: 30px;
+    right: 20px;
+    background: red;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.header .item.active{
+    position: relative;
+}
+.header .item.active:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    background: white;
+    bottom: -5px;
+}
