@@ -17,6 +17,11 @@
     /* float: left; */
 }
 
+.home{
+    font-size: 100px;
+    text-align: center;
+}
+
 .container>.posts>img{
     margin: 10px;
     float: left;
@@ -69,4 +74,15 @@
     left: 0;
     background: white;
     bottom: -5px;
+}
+
+.cont{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+
+.cont a {
+    color: white;
+    text-decoration: none;
 }

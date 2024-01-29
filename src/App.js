@@ -6,6 +6,8 @@ import shortid from "shortid";
 import { Pagination } from "./components/Pagination";
 import { Posts } from "./components/Posts";
 import { Comments } from "./components/Comments";
+import { Home } from "./components/Home";
+import { Routes, Route } from "react-router-dom";
 
 const url = 'http://localhost:9999'
 
@@ -61,14 +63,12 @@ function App() {
 			<Header endpoint={endpoint} setEndpoint={setEndpoint} />	
 			<div className="container">
 				{
-					endpoint === 'users' &&
-					data.map( item => <Users key={shortid.generate(12)} item = {item} setDeleteId={setDeleteId} />)
-					||
-					endpoint === 'posts' &&
-					data.map( (item) => <Posts key={item.id} item = {item} />)
-					||
-					endpoint === 'comments' &&
-					data.map( (item) => <Comments key={item.id} item = {item} />)
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/users" element={<Users />} />
+						<Route path="/comments" element={<Comments />} />
+						<Route path="/posts" element={<Posts />} />
+					</Routes>
 				}
 			</div>
 			<div className="pagination">
