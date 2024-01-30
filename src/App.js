@@ -36,7 +36,6 @@ function App() {
 		const getData = async() => {
 			const response = await axios.get(`${url}/${endpoint}?_page=${page}&_per_page=${limit}`)
 			setData(response.data.data)
-			console.log(response.data.data)
 		}
 
 		getData() 
