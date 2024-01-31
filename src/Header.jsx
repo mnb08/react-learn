@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export const Header = ({endpoint, setEndpoint}) => {
 
@@ -21,11 +21,11 @@ export const Header = ({endpoint, setEndpoint}) => {
 				fontSize: '30px',
 				fontWeight: '900',
 		}}>
-			<div>home</div>
+			<Link to={'/'}>home</Link>
 			<div className='cont'>
-				<Link to={'/users'} onClick={ () => setEndpoint('users')} className={`item ${endpoint == 'users' ? 'active' : ''}`}>Users </Link>
-				<Link to={'/comments'}onClick={ () => setEndpoint('comments')} className={`item ${endpoint == 'comments' ? 'active' : ''}`}>Comments</Link>
-				<Link to={'/posts'} onClick={ () => setEndpoint('posts')} className={`item ${endpoint == 'posts' ? 'active' : ''}`}>Posts</Link>
+				<NavLink to={'/users'} onClick={ () => setEndpoint('users')} >Users </NavLink>
+				<NavLink to={'/comments'}onClick={ () => setEndpoint('comments')} >Comments</NavLink>
+				<Link to={'/posts'} onClick={ () => setEndpoint('posts')} >Posts</Link>
 			</div>
 		</div>
 	)
